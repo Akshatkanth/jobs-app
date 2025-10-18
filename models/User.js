@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
         minLength:3,
         maxLength:50, 
     },
-    emai:{
+    email:{
         type:String,
         required:[true, 'Please enter your email address'],
         match:[
@@ -24,4 +24,4 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model('User', userSchema)
