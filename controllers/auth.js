@@ -13,9 +13,9 @@ const register = async (req, res) => {
 const login = async (req, res) => {
     const {email, password} = req.body
 
-    // if(!email || !password){
-    //     throw new BadRequestError("Please provide valid credentials")
-    // }
+    if(!email || !password){
+        throw new BadRequestError("Please provide valid credentials")
+    }
 
     //now if the error handling is passed, we move on to find the email of the user
     const user = await User.findOne({email})
